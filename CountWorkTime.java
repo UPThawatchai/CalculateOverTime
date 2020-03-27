@@ -38,7 +38,7 @@ public class CountWorkTime {
 
 		for (String part : result) {
 			try {
-				countDqyWork(part);
+				countDayWork(part);
 			} catch (EncryptedDocumentException | InvalidFormatException | IOException e) {
 				e.printStackTrace();
 			}
@@ -50,7 +50,7 @@ public class CountWorkTime {
 
 	}
 
-	public static void countDqyWork(String part)
+	public static void countDayWork(String part)
 			throws IOException, EncryptedDocumentException, InvalidFormatException, ParseException {
 		XSSFWorkbook workbook = new XSSFWorkbook(new File(part));
 		XSSFSheet sheet = workbook.getSheetAt(0);
