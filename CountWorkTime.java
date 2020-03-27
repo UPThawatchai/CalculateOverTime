@@ -46,15 +46,7 @@ public class CountWorkTime {
 		for (int sum : ots) {
 			sums += sum;
 		}
-
-		if (((sums / (double) 60) / (double) 8) > 1) {
-			//1.94 = 1 วัน 1 ชั่วโมง 34 นาที
-//			double xx = ((sums / (double) 60) / (double) 8);
-			System.out.println(sums / 8);
-		} else {
-			
-		}
-		System.out.println("รวมหมดทุกเดือนได้วันหยุดเพิ่ม : " + df2.format( (sums / (double) 60) / (double) 8 ) + " วัน:ชั่วโมง");
+		System.out.println("รวมหมดทุกเดือนได้วันหยุดเพิ่ม : " + df2.format( (sums / (double) 60)) + " ชั่วโมง (8 = 1 MAN/DAY)");
 
 	}
 
